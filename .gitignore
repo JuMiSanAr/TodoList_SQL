@@ -1,3 +1,4 @@
 .idea
 todos_database.db
 identifier.sqlite
+__pycache__

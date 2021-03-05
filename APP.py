@@ -15,10 +15,13 @@ while True:
     if selected_option == '0':
         print('Bye bye!')
         break
+
     elif selected_option == '1':
         newList()
+
     elif selected_option == '2':
         deleteList()
+
     else:
         print('Please introduce a valid number.')
         print('')
