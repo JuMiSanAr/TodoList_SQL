@@ -1,5 +1,6 @@
-from create_todo_list import add_new_todo_list as newList
-from delete_todo_list import delete_new_todo_list as deleteList
+from todo_list_create import add_new_todo_list as new_list
+from todo_list_delete import delete_new_todo_list as delete_list
+from todo_list_update import update_todo_list as update_list
 
 print('Hello again!')
 
@@ -8,6 +9,7 @@ while True:
     print('0 - Exit application')
     print('1 - Create new todo list')
     print('2 - Delete existing todo list')
+    print('3 - Update existing todo list')
     print('')
 
     selected_option = input('Please introduce a row number in order to proceed: ')
@@ -17,10 +19,13 @@ while True:
         break
 
     elif selected_option == '1':
-        newList()
+        new_list()
 
     elif selected_option == '2':
-        deleteList()
+        delete_list()
+
+    elif selected_option == '3':
+        update_list()
 
     else:
         print('Please introduce a valid number.')
