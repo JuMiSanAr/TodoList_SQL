@@ -18,13 +18,14 @@ c.execute('''
     CREATE TABLE todos
 (
     todo_id INTEGER PRIMARY KEY,
-    todo_name TEXT UNIQUE NOT NULL,
+    todo_name TEXT UNIQUE NOT NULL,    
+    todo_list_id INTEGER NOT NULL,
     created TEXT,
-    todo_list_id TEXT UNIQUE NOT NULL,
     due TEXT,
     assignee TEXT,
     importance TEXT,
-    comments TEXT
+    comments TEXT,
+    FOREIGN KEY (todo_list_id) REFERENCES todo_lists(todo_list_id)
 );
 ''')
 
