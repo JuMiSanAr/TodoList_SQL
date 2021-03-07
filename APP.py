@@ -4,6 +4,9 @@ from todo_list_update import update_todo_list as update_list
 from single_todo_create import add_new_todo as new_todo
 from single_todo_delete import delete_todo
 from single_todo_update import update_todo
+from delete_all_lists import delete_all_lists as delete_lists
+from delete_all_todos import delete_all_todos as delete_todos
+from delete_todos_in_list import delete_todos_in_list
 
 print('')
 print('Hello again!')
@@ -21,6 +24,10 @@ while True:
     print('4 - Create new todo')
     print('5 - Delete existing todo')
     print('6 - Update existing todo')
+    print('')
+    print('7 - Delete all lists')
+    print('8 - Delete all todos')
+    print('9 - Delete all todos in a list')
     print('')
 
     selected_option = input('Please introduce a row number in order to proceed: ')
@@ -48,6 +55,15 @@ while True:
 
     elif selected_option == '6':
         update_todo()
+
+    elif selected_option == '7':
+        delete_lists()
+
+    elif selected_option == '8':
+        delete_todos()
+
+    elif selected_option == '9':
+        delete_todos_in_list()
 
     else:
         print('ERROR - Please introduce a valid number.')

@@ -15,25 +15,28 @@ def delete_todo_list():
         print('')
 
     else:
-        print(lists_details())
+        lists_details()
 
-        name = input('Type the name of the list you want to delete: ')
+        list_id = input('Type the name of the list you want to delete: ')
 
-        if name == '':
+        if list_id == '':
             print('ERROR - No input selected.')
             print('')
         else:
             confirmation = input('''Are you sure you want to delete this list? [y/n] ''')
 
             if confirmation == 'y' or confirmation == 'yes':
+
+                name = list(c.execute('SELECT todo_list_name FROM todo_lists WHERE todo_list_id == ? ', (list_id,)))
+
                 c.execute('''
                     DELETE
                     FROM todo_lists
-                    WHERE todo_list_name == ?
-                    ''', (name,)
+                    WHERE todo_list_id == ?
+                    ''', (list_id,)
                           )
 
-                print(f'List "{name}" deleted.')
+                print(f'List "{name[0][0]}" deleted.')
 
             print('')
 

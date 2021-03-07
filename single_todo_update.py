@@ -128,6 +128,39 @@ def update_todo():
                               )
                     break
 
+                elif field_to_update == '4':
+                    new_assignee = input(f'Please insert a new assignee for this todo: ')
+
+                    c.execute('''
+                        UPDATE todos
+                        SET assignee = ?
+                        WHERE todo_id == ?
+                    ''', (new_assignee, todo_id)
+                              )
+                    break
+
+                elif field_to_update == '5':
+                    new_importance = input(f'Please insert a new level of importance (1-10) for this todo: ')
+
+                    c.execute('''
+                        UPDATE todos
+                        SET importance = ?
+                        WHERE todo_id == ?
+                    ''', (new_importance, todo_id)
+                              )
+                    break
+
+                elif field_to_update == '6':
+                    new_comments = input(f'Please add your comments / instructions for this todo: ')
+
+                    c.execute('''
+                        UPDATE todos
+                        SET comments = ?
+                        WHERE todo_id == ?
+                    ''', (new_comments, todo_id)
+                              )
+                    break
+
                 else:
                     print('ERROR - Invalid input')
                     print('')

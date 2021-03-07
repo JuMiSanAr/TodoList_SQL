@@ -5,9 +5,17 @@ def add_new_todo_list():
     conn = sqlite3.connect('todos_database.db')
     c = conn.cursor()
 
-    print('')
-    name = input('Select a name for your new todo list: ')
-    print('')
+    while True:
+        print('')
+        name = input('Select a name for your new todo list: ')
+        print('')
+
+        if name != '':
+            break
+        else:
+            print('ERROR - Name field cannot be empty')
+            print('')
+
     print('Add a description for your todo list.')
     desc = input('If you do not want to add a description, leave this field empty: ')
 

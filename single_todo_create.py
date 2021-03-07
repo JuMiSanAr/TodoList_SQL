@@ -48,7 +48,7 @@ please create a new todo list to start using the application.''')
             todo_list_input = input('Select the number of the list where this todo will be included (required): ')
 
             try:
-                if todo_list_input != '' and 0 <= int(todo_list_input) < lists_length:
+                if todo_list_input != '' and 0 < int(todo_list_input) <= lists_length:
                     break
                 else:
                     print('')
@@ -85,5 +85,3 @@ please create a new todo list to start using the application.''')
 
         conn.commit()
     conn.close()
-
-add_new_todo()
