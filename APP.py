@@ -1,3 +1,4 @@
+from Search.search_menu import filter_menu
 from todo_list_create import add_new_todo_list as new_list
 from todo_list_delete import delete_todo_list as delete_list
 from todo_list_update import update_todo_list as update_list
@@ -7,6 +8,7 @@ from single_todo_update import update_todo
 from delete_all_lists import delete_all_lists as delete_lists
 from delete_all_todos import delete_all_todos as delete_todos
 from delete_todos_in_list import delete_todos_in_list
+from Search.search_menu import filter_menu
 
 print('')
 print('Hello again!')
@@ -28,6 +30,8 @@ while True:
     print('7 - Delete all lists')
     print('8 - Delete all todos')
     print('9 - Delete all todos in a list')
+    print('')
+    print('10 - Filter todos')
     print('')
 
     selected_option = input('Please introduce a row number in order to proceed: ')
@@ -64,6 +68,9 @@ while True:
 
     elif selected_option == '9':
         delete_todos_in_list()
+
+    elif selected_option == '10':
+        filter_menu()
 
     else:
         print('ERROR - Please introduce a valid number.')
