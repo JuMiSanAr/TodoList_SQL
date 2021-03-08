@@ -1,5 +1,5 @@
 import sqlite3
-from print_todo_lists_details import print_all_todo_lists as print_lists
+from Print_helpers.print_todo_lists_details import print_all_todo_lists as print_lists
 
 
 def delete_todos_in_list():

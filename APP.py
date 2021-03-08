@@ -1,13 +1,12 @@
-from Search.search_menu import filter_menu
-from todo_list_create import add_new_todo_list as new_list
-from todo_list_delete import delete_todo_list as delete_list
-from todo_list_update import update_todo_list as update_list
-from single_todo_create import add_new_todo as new_todo
-from single_todo_delete import delete_todo
-from single_todo_update import update_todo
-from delete_all_lists import delete_all_lists as delete_lists
-from delete_all_todos import delete_all_todos as delete_todos
-from delete_todos_in_list import delete_todos_in_list
+from Todo_lists.todo_list_create import add_new_todo_list as new_list
+from Todo_lists.todo_list_delete import delete_todo_list as delete_list
+from Todo_lists.todo_list_update import update_todo_list as update_list
+from Single_todos.single_todo_create import add_new_todo as new_todo
+from Single_todos.single_todo_delete import delete_todo
+from Single_todos.single_todo_update import update_todo
+from Delete_all.delete_all_lists import delete_all_lists as delete_lists
+from Delete_all.delete_all_todos import delete_all_todos as delete_todos
+from Delete_all.delete_todos_in_list import delete_todos_in_list
 from Search.search_menu import filter_menu
 
 print('')

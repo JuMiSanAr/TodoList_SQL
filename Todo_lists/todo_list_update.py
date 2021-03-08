@@ -1,5 +1,5 @@
 import sqlite3
-from print_todo_lists_details import print_all_todo_lists as lists_details
+from Print_helpers.print_todo_lists_details import print_all_todo_lists as lists_details
 
 
 def update_todo_list():

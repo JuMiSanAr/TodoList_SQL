@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime
 from functools import reduce
-from print_todo_lists_details import print_all_todo_lists as lists_details
+from Print_helpers.print_todo_lists_details import print_all_todo_lists as lists_details
 
 
 def add_new_todo():
@@ -66,8 +66,22 @@ please create a new todo list to start using the application.''')
         print('')
         assignee = input('Who is in charge of completing this task? ')
         print('')
-        # INCLUDE BOUNDARIES
-        importance = input('Assign a level of importance (1-10) to this task: ')
+
+        while True:
+            importance = input('Assign a level of importance (1-10) to this task: ')
+
+            try:
+                if 0 < int(importance) <= 10:
+                    break
+                else:
+                    print('')
+                    print('The importance level can only be a number between 1 and 10')
+                    print('')
+            except ValueError:
+                print('')
+                print('Please introduce a valid number')
+                print('')
+
         print('')
         comments = input('Introduce any comments / instructions regarding this task: ')
         print('')
